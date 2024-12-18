@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-container">
         <h1>Insights</h1>
         <!-- Your Insights content here -->
     </div>
