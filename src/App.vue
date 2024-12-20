@@ -40,10 +40,6 @@ html {
   flex-wrap: wrap;
 }
 
-.widget-container.vertical {
-  flex-direction: column;
-}
-
 .widget {
   background-color: white;
   border: 1px solid #E6E9EE;

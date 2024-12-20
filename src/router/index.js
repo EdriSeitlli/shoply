@@ -6,6 +6,7 @@ import InsightsView from "@/views/InsightsView.vue";
 
 const routes = [
   { path: "/", redirect: "/dashboard" },
+  { path: "/shoply", redirect: "/dashboard" },
   { path: "/dashboard", component: DashboardView },
   { path: "/product-performance", component: ProductPerformanceView },
   { path: "/optimization", component: OptimizationView },

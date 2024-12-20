@@ -117,7 +117,7 @@ nav ul li a.active {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     /* Show hamburger menu */
     .menu-toggle {
