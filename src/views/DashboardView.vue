@@ -1,7 +1,7 @@
 <template>
     <div class="main-container">
         <div class="widget-container">
-            <div class="widget" style="flex: 1 1 40%;">
+            <div class="widget line-chart-container">
                 <apexchart type="area" :options="lineChartOptions" :series="lineChartSeries" />
             </div>
             <div class="widget-container" style="flex-direction: column; flex: 1;">
@@ -16,7 +16,10 @@
                     <img src="@/assets/google-merchant-center.png" alt="google merchant logo">
                     <div class="overall-stats">
                         <span class="name">Merchant Products</span>
-                        <span class="value">413</span>
+                        <span v-if="isLoading" class="value" aria-live="polite">Loading...</span>
+                        <span v-else-if="Array.isArray(data) && data.length > 0" class="value">{{ data.length }}</span>
+                        <span v-else-if="Array.isArray(data)" class="value">No items found</span>
+                        <span v-else class="value">No data available</span>
                     </div>
                 </div>
                 <div class="widget overall-stats-container">
@@ -160,19 +163,35 @@
             </div>
         </div>
         <div class="widget-container">
-            <div class="widget"></div>
-            <div class="widget"></div>
+            <div class="widget">
+                <PreviewTable title="User Information" :data="jsonData1" />
+            </div>
+            <div class="widget">
+                <PreviewTable title="Product Inventory" :data="jsonData2" />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import VueApexCharts from "vue3-apexcharts";
+import PreviewTable from "@/components/PreviewTable.vue";
 
 export default {
     name: "DashboardView",
     components: {
         apexchart: VueApexCharts, // Register the ApexChart component
+        PreviewTable, // Register the PreviewTable component here
+    },
+    props: {
+        data: {
+            type: [Array, Object], // Accept both Array and Object
+            default: () => ([]), // Default to an empty array
+        },
+        isLoading: {
+            type: Boolean,
+            default: false,
+        },
     },
     data() {
         return {
@@ -360,7 +379,7 @@ export default {
                                 },
                             },
                         },
-                    },
+                    }
                 ],
                 stroke: {
                     curve: "smooth",
@@ -521,6 +540,14 @@ export default {
                     enabled: false, // Disable data labels inside the chart
                 },
             },
+            jsonData1: [
+                { Name: "Alice", Age: 25, Occupation: "Engineer" },
+                { Name: "Bob", Age: 30, Occupation: "Designer" },
+            ],
+            jsonData2: [
+                { Product: "Laptop", Price: 1200, Stock: 50 },
+                { Product: "Phone", Price: 800, Stock: 100 },
+            ],
         };
     },
     methods: {
@@ -532,6 +559,16 @@ export default {
 </script>
 
 <style scoped>
+.line-chart-container {
+    flex: 1 1 40%;
+}
+
+@media screen and (max-width: 1600px) {
+    .line-chart-container {
+        flex: 1 1 100%;
+    }
+}
+
 .segments-container {
     width: 100%;
     display: flex;
