@@ -1,13 +1,27 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view :data="data" :is-loading="isLoading" />
+    <router-view />
   </div>
 </template>
 
 <script setup>
 import Navbar from '@/components/Navbar.vue';
+import { fetchAllProducts } from '@/services/googleAdsApi';
 
+// Example of fetching data on component mount
+import { onMounted, ref } from 'vue';
+
+const products = ref([]);
+
+onMounted(async () => {
+  try {
+    const data = await fetchAllProducts();
+    products.value = data.products; // Assuming the API returns an object with a products key
+  } catch (error) {
+    console.error('Failed to fetch products:', error);
+  }
+});
 </script>
 
 <style>

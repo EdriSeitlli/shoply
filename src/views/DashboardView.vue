@@ -541,12 +541,18 @@ export default {
                 },
             },
             jsonData1: [
-                { Name: "Alice", Age: 25, Occupation: "Engineer" },
-                { Name: "Bob", Age: 30, Occupation: "Designer" },
+                { ID: "653-13011_107_os", Image: "https://dev.shoply.pro/wp-content/uploads/2024/08/NAN.png", Title: "Badila Πλεκτό πουλόβερ tie-dye με V λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "554%", Segment: "High", ConvValue: "€119" },
+                { ID: "251-11005_113_m", Image: "https://dev.shoply.pro/wp-content/uploads/2024/08/NAN.png", Title: "Badila Ημίπαλτο με γιακά με πέτο και μακρύ μανίκι Τσέπες patch μπροστά σταυρωτό κλείσιμο μπροστά με κουμπιά ΣΤΕΓΝΟ ΚΑΘΑΡΙΣΜΑ Γυναικεία Πανωφόρια Ρούχα", ROAS: "25,750%", Segment: "Medium", ConvValue: "€589" },
+                { ID: "253-07021_107_OS", Image: "https://www.badila.gr/Images/Products/253-07021_107-01.jpg", Title: "Badila Πλεκτή καζάκα ριγέ με στρογγυλή λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "7,075%", Segment: "Medium", ConvValue: "€330" },
+                { ID: "253-03011_102_M", Image: "https://www.badila.gr/Images/Products/253-03011_102-01.jpg", Title: "Badila Παντελόνι με πιέτες μπροστά και λάστιχο στο πίσω μέρος Κλείσιμο μπροστά με φερμουάρ και κουμπί Γυναικεία Παντελόνια Ρούχα", ROAS: "4,201%", Segment: "Medium", ConvValue: "€246" },
+                { ID: "253-07027_103_S", Image: "https://www.badila.gr/Images/Products/253-07027_103-01.jpg", Title: "Badila Μπλούζα ριπ με φαρδιά μανίκια και στρογγυλή λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "923%", Segment: "Medium", ConvValue: "€165" }
             ],
             jsonData2: [
-                { Product: "Laptop", Price: 1200, Stock: 50 },
-                { Product: "Phone", Price: 800, Stock: 100 },
+                { ID: "653-13011_107_os", Image: "https://dev.shoply.pro/wp-content/uploads/2024/08/NAN.png", Title: "Badila Πλεκτό πουλόβερ tie-dye με V λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "554%", Segment: "High", Clicks: 105 },
+                { ID: "251-01004_110_S", Image: "https://www.badila.gr/Images/Products/251-01004_110-01.jpg", Title: "Badila Φόρεμα σατέν μίνι με λάστιχο στα μανίκια και άνοιγμα μπροστά στη λαιμόκοψη Γυναικεία Φορέματα Ρούχα", ROAS: "70%", Segment: "Limited +", Clicks: 85 },
+                { ID: "253-07027_103_S", Image: "https://www.badila.gr/Images/Products/253-07027_103-01.jpg", Title: "Badila Μπλούζα ριπ με φαρδιά μανίκια και στρογγυλή λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "923%", Segment: "Medium", Clicks: 84 },
+                { ID: "653-13003_118_os", Image: "https://dev.shoply.pro/wp-content/uploads/2024/08/NAN.png", Title: "Badila Πλεκτό πουλόβερ μπουκλέ με V λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "157%", Segment: "Limited +", Clicks: 82 },
+                { ID: "253-07027_103_M", Image: "https://www.badila.gr/Images/Products/253-07027_103-01.jpg", Title: "Badila Μπλούζα ριπ με φαρδιά μανίκια και στρογγυλή λαιμόκοψη Γυναικεία Μπλούζες Ρούχα", ROAS: "261%", Segment: "Medium", Clicks: 77 }
             ],
         };
     },
